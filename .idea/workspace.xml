@@ -5,23 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afc8bae2-489e-407d-8a33-9a19b6b51118" name="Changes" comment="Simple HTTP Server">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HelloHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ServerInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SimpleHttpServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SimpleHttpServerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/apache/ApacheFileUploadHttpExchange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/apache/HttpExchangeRequestContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/ServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shared/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/handlers.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/file/op/FileSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/file/actions/FileSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/HttpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ServerInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SimpleHttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/SimpleHttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handlers/FormEncodedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/handlers/FormEncodedHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handlers/HelloHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/handlers/HelloHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handlers/MultipartHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/handlers/MultipartHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handlers/UploadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/handlers/UploadHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SimpleHttpServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SimpleHttpServerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +57,16 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="HttpServerExample" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="HttpServerExample" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -78,9 +88,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2uBkuUtKTGiYvKo0gasQb8tj3oS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -90,7 +100,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build HttpServerExample.executor": "Run",
-    "Gradle.HttpServerExample [:org.example.ServerInitializer.main()].executor": "Run",
+    "Gradle.HttpServerExample [:com.apache.ApacheFileUploadHttpExchange.main()].executor": "Debug",
+    "Gradle.HttpServerExample [:com.http.ServerInitializer.main()].executor": "Debug",
+    "Gradle.HttpServerExample [:org.example.ServerInitializer.main()].executor": "Debug",
     "Gradle.HttpServerExample [build].executor": "Run",
     "Gradle.HttpServerExample [clean].executor": "Run",
     "Gradle.KotlinHttpServerTest.check.executor": "Run",
@@ -105,16 +117,21 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.4218391",
-    "settings.editor.selected.configurable": "project.kotlinCompiler"
+    "settings.editor.selected.configurable": "file.status.colors"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.SimpleHttpServerTest.testHelloEndpoint">
-    <configuration name="ServerInitializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.ServerInitializer" />
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.apache" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ServerInitializer">
+    <configuration name="ApacheFileUploadHttpExchange" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.apache.ApacheFileUploadHttpExchange" />
       <module name="HttpServerExample.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="com.apache.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,104 +139,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HttpServerExample [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="HttpServerExample [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="KotlinHttpServerTest.testHelloEndpoint" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;KotlinHttpServerTest.testHelloEndpoint&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="SimpleHttpServerTest.testHelloEndpoint" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;SimpleHttpServerTest.testHelloEndpoint&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+    <configuration name="ServerInitializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.http.ServerInitializer" />
+      <module name="HttpServerExample.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.http.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SimpleHttpServerTest.testHelloEndpoint" />
-        <item itemvalue="Gradle.HttpServerExample [build]" />
-        <item itemvalue="Gradle.HttpServerExample [clean]" />
-        <item itemvalue="Gradle.KotlinHttpServerTest.testHelloEndpoint" />
+        <item itemvalue="Application.ApacheFileUploadHttpExchange" />
         <item itemvalue="Application.ServerInitializer" />
       </list>
     </recent_temporary>
@@ -238,5 +173,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Simple HTTP Server" />
     <option name="LAST_COMMIT_MESSAGE" value="Simple HTTP Server" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/http/handlers/UploadHandler.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="new File(dir+&quot;any&quot;)" language="JAVA" />
+        <watch expression="exchange.getRequestBody()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

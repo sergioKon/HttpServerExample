@@ -2,7 +2,7 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.sun.net.httpserver.HttpServer;
-import org.example.handlers.HelloHandler;
+import com.http.handlers.HelloHandler;
 import org.junit.jupiter.api.*;
 import java.io.IOException;
 import java.net.InetSocketAddress;

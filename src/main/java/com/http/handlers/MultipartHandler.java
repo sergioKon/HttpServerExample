@@ -1,6 +1,6 @@
-package org.example.handlers;
+package com.http.handlers;
 
-import com.file.op.FileSaver;
+import com.file.actions.FileSaver;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import org.apache.logging.log4j.LogManager;
@@ -12,6 +12,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.infra.Response.sendResponse;
+
 
 public class MultipartHandler implements HttpHandler {
     private static final Logger logger = LogManager.getLogger(MultipartHandler.class);
@@ -20,15 +22,9 @@ public class MultipartHandler implements HttpHandler {
         try {
             parse(exchange);
             String msg="success";
-            exchange.sendResponseHeaders(200,msg.length());
-            try (OutputStream os = exchange.getResponseBody()) {
-                os.write(msg.getBytes());
-            }
+            sendResponse(exchange, msg,200);
         } catch (IOException e) {
-            exchange.sendResponseHeaders(500,e.getMessage().length());
-            try (OutputStream os = exchange.getResponseBody()) {
-                os.write(e.getMessage().getBytes());
-            }
+            sendResponse(exchange,e.getMessage(),500);
         }
     }
 
@@ -38,6 +34,7 @@ public class MultipartHandler implements HttpHandler {
         if (!isMultipart(exchange)){
             return;
         }
+
         StringBuilder buffer= new StringBuilder();
 
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(exchange.getRequestBody()))) {
