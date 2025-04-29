@@ -1,14 +1,10 @@
-package com.http;
+package com.http.init;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.Configurator;
-import com.http.handlers.FormEncodedHandler;
-import com.http.handlers.HelloHandler;
-import com.http.handlers.MultipartHandler;
-import com.http.handlers.UploadHandler;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

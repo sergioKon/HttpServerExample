@@ -4,24 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afc8bae2-489e-407d-8a33-9a19b6b51118" name="Changes" comment="Simple HTTP Server">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/apache/ApacheFileUploadHttpExchange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/apache/HttpExchangeRequestContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/http/ServerInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shared/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/handlers.properties" afterDir="false" />
+    <list default="true" id="afc8bae2-489e-407d-8a33-9a19b6b51118" name="Changes" comment="Fix apache upload wrapper">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/file/op/FileSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/file/actions/FileSaver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/HttpRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ServerInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SimpleHttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/SimpleHttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handlers/FormEncodedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/handlers/FormEncodedHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handlers/HelloHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/handlers/HelloHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handlers/MultipartHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/handlers/MultipartHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handlers/UploadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/handlers/UploadHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SimpleHttpServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SimpleHttpServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/apache/ApacheFileUploadHttpExchange.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/apache/HttpExchangeRequestContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/http/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/wrapper/HttpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/http/ServerInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/init/ServerInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/http/SimpleHttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/init/SimpleHttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/http/handlers/UploadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/http/handlers/UploadHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +135,7 @@
       <module name="HttpServerExample.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.http.*" />
+          <option name="PATTERN" value="com.http.init.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -168,18 +159,28 @@
       <option name="presentableId" value="Default" />
       <updated>1741729584282</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fix apache upload wrapper">
+      <option name="closed" value="true" />
+      <created>1745932981833</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745932981833</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Simple HTTP Server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Simple HTTP Server" />
+    <MESSAGE value="Fix apache upload wrapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix apache upload wrapper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/http/handlers/UploadHandler.java</url>
-          <line>36</line>
+          <line>38</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
       </breakpoints>

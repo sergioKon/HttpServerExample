@@ -1,17 +1,16 @@
-package com.http;
+package com.http.wrapper;
 
 import com.sun.net.httpserver.HttpExchange;
 import org.apache.commons.fileupload.RequestContext;
 
-import java.io.IOException;
+
 import java.io.InputStream;
 
 public class HttpRequest  implements RequestContext {
     private final HttpExchange httpExchange;
-
+    private boolean hasBeenRead = false;
     public HttpRequest(HttpExchange httpExchange) {
        this.httpExchange=httpExchange;
-
     }
     @Override
         public String getCharacterEncoding() {
@@ -30,8 +29,11 @@ public class HttpRequest  implements RequestContext {
     }
 
         public InputStream getInputStream() {
+            if(hasBeenRead){
+                throw new IllegalStateException("Request body has already been read once!");
+            }
+            hasBeenRead = true;
             return httpExchange.getRequestBody();
         }
-
 }
 

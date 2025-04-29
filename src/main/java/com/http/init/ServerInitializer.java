@@ -1,6 +1,5 @@
-package com.http;
+package com.http.init;
 
-import com.http.handlers.UploadHandler;
 import com.sun.net.httpserver.HttpHandler;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
