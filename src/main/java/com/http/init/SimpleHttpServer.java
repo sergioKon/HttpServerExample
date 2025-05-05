@@ -18,13 +18,13 @@ public class SimpleHttpServer {
 
 
     public void start(int port) throws IOException {
+        this.start("127.0.0.1", port);
+    }
+    public void start(String ipAddr, int port) throws IOException {
         Configurator.setRootLevel(Level.INFO);
 
-        server = HttpServer.create(new InetSocketAddress(port), 0);
-
-        httpHandler.forEach((key, value) -> {
-           server.createContext("/"+key,  value);
-        });
+        server = HttpServer.create(new InetSocketAddress(ipAddr, port), 0);
+        httpHandler.forEach((key, value) -> server.createContext("/"+key,  value));
        /*
         server.createContext("/hello", new HelloHandler());
         server.createContext("/upload", new UploadHandler());

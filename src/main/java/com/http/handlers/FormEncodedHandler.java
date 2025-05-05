@@ -17,7 +17,7 @@ public class FormEncodedHandler implements HttpHandler {
         StringBuilder buffer= getClientData(exchange);
         Headers headers= exchange.getRequestHeaders();
         List<String> separator= headers.get("separator");
-        String symbol = "";
+        String symbol;
         if(separator==null) {
             symbol="&";
         }

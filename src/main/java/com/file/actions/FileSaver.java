@@ -17,9 +17,7 @@ public class FileSaver {
     private  String data;
     private String filename;
     private static final Logger logger= LogManager.getLogger(FileSaver.class);
-    public FileSaver(byte[] data){
-        this.data= new String(data);
-    }
+
     public FileSaver(String data) {
         this.data=data;
         readFileName();
@@ -40,7 +38,7 @@ public class FileSaver {
         filename= data.substring(iStart+"filename=".length()+1,iEnd);
     }
 
-    public void start() throws IOException {
+    public void start()  {
 
         Thread thread = new Thread(() -> {
             try {
